@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - K-Pop Band</title>
+    <link rel="stylesheet" href="galeria.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logoae (2).png" alt="logo" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="site.html">Inicial</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="musica.html">Músicas</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery">
+        <h2>Album</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/img1.jpg" alt="Imagem 1" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/img2.jpg" alt="Imagem 2" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/img3.jpg" alt="Imagem 3" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/img4.jpg" alt="Imagem 4" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/img5.jpg" alt="Imagem 5" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/img6.jpg" alt="Imagem 6" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/img7.jpg" alt="Imagem 7" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/img8.jpg" alt="Imagem 8" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/img9.jpg" alt="Imagem 9" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/img10.jpg" alt="Imagem 10" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/img11.jpg" alt="Imagem 11" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/img12.png" alt="Imagem 12" onclick="openModal(this)">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+    
+    <script>
+        function openModal(img) {
+            const modal = document.getElementById("modal");
+            const modalImg = document.getElementById("modal-img");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+    
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2024 K-Pop Band. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://twitter.com/aespa_official"><img src="https://static.vecteezy.com/system/resources/previews/042/148/611/non_2x/new-twitter-x-logo-twitter-icon-x-social-media-icon-free-png.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/aespa_official/"><img src="https://png.pngtree.com/png-clipart/20180518/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3571406.png" alt="Instagram"></a>
+            <a href="https://www.youtube.com/c/aespa"><img src="https://static.vecteezy.com/system/resources/previews/018/930/572/original/youtube-logo-youtube-icon-transparent-free-png.png" alt="YouTube"></a>
+        </div>
+    </footer>
+</body>
+</html>
