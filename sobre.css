@@ -7,8 +7,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #000;
+    color: #fff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -32,10 +32,8 @@ nav ul {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-}
-
-nav ul li {
-    margin: 0 15px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -86,4 +84,24 @@ footer {
 .social-icons img {
     width: 30px;
     margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 15px;
+    }
+
+    .about h2, .about h3 {
+        font-size: 24px;
+    }
+
+    .about-card {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
