@@ -33,7 +33,7 @@ nav ul {
     justify-content: center;
     margin-top: 10px;
     gap: 15px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 nav ul li a {
@@ -101,7 +101,6 @@ footer {
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 10px;
+        overflow-x: auto;
     }
 }
