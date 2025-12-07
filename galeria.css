@@ -33,7 +33,7 @@ nav ul {
     justify-content: center;
     margin-top: 10px;
     gap: 15px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Mantém horizontal */
 }
 
 nav ul li a {
@@ -140,20 +140,21 @@ footer {
     color: #ff4081;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    gap: 15px;
-    flex-wrap: nowrap; /* Mantém em linha sempre */
-}
-
 @media (max-width: 768px) {
+    .gallery {
+        padding: 20px;
+    }
+
+    .gallery h2 {
+        font-size: 28px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
     nav ul {
-        flex-wrap: nowrap; /* Continua horizontal no celular */
-        gap: 10px;
-        overflow-x: auto; /* Permite rolar se não couber */
+        overflow-x: auto; /* scroll horizontal se não couber */
     }
 }
