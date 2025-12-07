@@ -1,12 +1,13 @@
+/* ======= RESET ======= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ======= BODY ======= */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-color: #000000;
     color: #ffffff;
     display: flex;
@@ -14,7 +15,7 @@ body {
     min-height: 100vh;
 }
 
-/* HEADER */
+/* ======= HEADER ======= */
 header {
     background: linear-gradient(90deg, #333, #444);
     color: #fff;
@@ -27,35 +28,35 @@ header {
     max-width: 150px;
 }
 
+/* ======= MENU NAV (IGUAL EM TODAS AS PÁGINAS) ======= */
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
     margin-top: 10px;
-}
 
-nav ul li {
-    margin: 0 15px;
+    display: flex;
+    flex-direction: row;       /* ➜ SEMPRE lado a lado no PC */
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 6px 12px;
     border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s;
 }
 
 nav ul li a:hover {
     background: #ff4081;
 }
 
-/* HERO */
+/* ======= HERO ======= */
 .hero {
     height: 400px;
-    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,14 +68,14 @@ nav ul li a:hover {
     max-width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 .hero h2 {
     font-size: 40px;
 }
 
-/* ABOUT & MEMBERS */
+/* ======= ABOUT & MEMBERS ======= */
 .about, .members {
     padding: 20px;
     text-align: center;
@@ -82,8 +83,8 @@ nav ul li a:hover {
 
 .about h2, .members h2 {
     font-size: 32px;
-    margin-bottom: 10px;
     color: #ff4081;
+    margin-bottom: 10px;
 }
 
 .member-grid {
@@ -114,12 +115,11 @@ nav ul li a:hover {
     border-radius: 50%;
 }
 
-/* NEWS */
+/* ======= NEWS ======= */
 .news {
     padding: 20px;
     text-align: center;
     margin: 1rem 0;
-    border-radius: 8px;
 }
 
 .news article {
@@ -137,33 +137,29 @@ nav ul li a:hover {
     border: none;
     padding: 8px 15px;
     font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
     border-radius: 5px;
-    margin-top: 10px;
+    cursor: pointer;
 }
 
 .more-news:hover {
     background-color: #e91e63;
 }
 
-/* NEW MUSIC */
+/* ======= NEW MUSIC ======= */
 .new-music {
     margin: 20px 0;
 }
 
 .new-music img {
     max-width: 100%;
-    height: auto;
     border-radius: 8px;
     width: 300px;
     height: 300px;
 }
 
-/* FOOTER */
+/* ======= FOOTER ======= */
 footer {
     background: #333;
-    color: #fff;
     text-align: center;
     padding: 5px;
     margin-top: auto;
@@ -174,17 +170,13 @@ footer {
     margin: 0 5px;
 }
 
-/* ============================
-   RESPONSIVIDADE (CELULAR)
-============================ */
+/* ========= RESPONSIVIDADE ========= */
 @media (max-width: 600px) {
 
+    /* NAV NO CELULAR EM COLUNA — IGUAL AS OUTRAS PÁGINAS */
     nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
+        flex-direction: column;
+        gap: 8px;
     }
 
     .hero {
@@ -204,14 +196,6 @@ footer {
     .member img {
         width: 130px;
         height: 130px;
-    }
-
-    .about h2, .members h2 {
-        font-size: 26px;
-    }
-
-    .news {
-        padding: 10px;
     }
 
     .news article {
