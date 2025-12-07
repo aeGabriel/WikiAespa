@@ -7,14 +7,12 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #000;
+    color: #fff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-
-/* HEADER */
 
 header {
     background: linear-gradient(90deg, #333, #444);
@@ -35,7 +33,7 @@ nav ul {
     justify-content: center;
     margin-top: 10px;
     gap: 15px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -50,8 +48,6 @@ nav ul li a {
 nav ul li a:hover {
     background: #ff4081;
 }
-
-/* HERO */
 
 .hero {
     height: 400px;
@@ -73,8 +69,6 @@ nav ul li a:hover {
 .hero h2 {
     font-size: 40px;
 }
-
-/* ABOUT & MEMBERS */
 
 .about, .members {
     padding: 20px;
@@ -115,8 +109,6 @@ nav ul li a:hover {
     border-radius: 50%;
 }
 
-/* NEWS */
-
 .news {
     padding: 20px;
     text-align: center;
@@ -144,8 +136,6 @@ nav ul li a:hover {
     height: 300px;
 }
 
-/* FOOTER */
-
 footer {
     background: #333;
     color: #fff;
@@ -159,21 +149,10 @@ footer {
     margin: 0 5px;
 }
 
-/* RESPONSIVO */
-
-@media (max-width: 600px) {
-
+@media (max-width: 768px) {
     nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 8px;
-        flex-wrap: nowrap;
-    }
-
-    nav ul li a {
-        font-size: 14px;
-        padding: 5px 6px;
+        flex-direction: column;
+        gap: 10px;
     }
 
     .hero {
