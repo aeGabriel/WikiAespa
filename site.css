@@ -178,6 +178,7 @@ footer {
    RESPONSIVIDADE (CELULAR)
 ============================ */
 @media (max-width: 600px) {
+
     nav ul {
         display: flex;
         flex-direction: row;
@@ -185,7 +186,6 @@ footer {
         flex-wrap: wrap;
         gap: 10px;
     }
-}
 
     .hero {
         height: auto;
