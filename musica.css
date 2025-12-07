@@ -7,18 +7,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #000000;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #000;
+    color: #fff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -42,10 +32,8 @@ nav ul {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-}
-
-nav ul li {
-    margin: 0 15px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -60,6 +48,7 @@ nav ul li a {
 nav ul li a:hover {
     background: #ff4081;
 }
+
 .music {
     padding: 20px;
     text-align: center;
@@ -120,4 +109,22 @@ footer {
 .social-icons img {
     width: 30px;
     margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    .music-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .music-item {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
