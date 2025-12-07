@@ -55,8 +55,14 @@ galleryItems.forEach(img => {
     img.addEventListener('click', () => {
         modal.style.display = 'flex';
         modalImg.src = img.src;
-        modalImg.style.transform = 'scale(0.7)';
-        modalImg.offsetHeight; // força reflow para reiniciar animação
+
+        // Remove animação anterior
+        modalImg.style.animation = 'none';
+
+        // Força reflow para reiniciar animação
+        void modalImg.offsetWidth;
+
+        // Aplica animação de zoom
         modalImg.style.animation = 'zoomIn 0.3s forwards';
     });
 });
