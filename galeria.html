@@ -42,40 +42,12 @@
     <!-- Modal -->
     <div id="modal" class="modal">
         <span class="close">&times;</span>
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
         <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
     </div>
     
-    <script>
-        const galleryItems = document.querySelectorAll('.gallery-item img');
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modal-img');
-const closeBtn = document.querySelector('.close');
-
-galleryItems.forEach(img => {
-    img.addEventListener('click', () => {
-        modal.style.display = 'flex';
-        modalImg.src = img.src;
-
-        // Remove animação anterior
-        modalImg.style.animation = 'none';
-
-        // Força reflow para reiniciar animação
-        void modalImg.offsetWidth;
-
-        // Aplica animação de zoom
-        modalImg.style.animation = 'zoomIn 0.3s forwards';
-    });
-});
-
-closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
-
-modal.addEventListener('click', e => {
-    if(e.target === modal) modal.style.display = 'none';
-});
-    </script>
-
     <footer>
         <p>&copy; 2024 K-Pop Band. All rights reserved.</p>
         <div class="social-icons">
@@ -84,5 +56,7 @@ modal.addEventListener('click', e => {
             <a href="https://www.youtube.com/c/aespa"><img src="https://static.vecteezy.com/system/resources/previews/018/930/572/original/youtube-logo-youtube-icon-transparent-free-png.png" alt="YouTube"></a>
         </div>
     </footer>
+
+    <script src="galeria.js"></script>
 </body>
 </html>
