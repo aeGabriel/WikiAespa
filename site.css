@@ -1,109 +1,235 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ---------------- HEADER ---------------- */
 
 header {
-    width: 100%;
-    background-color: #111;
-    padding: 15px 0;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
+    background: linear-gradient(90deg, #333, #444);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-header nav {
+.logo img {
+    max-width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    margin-top: 10px;
+    gap: 15px;
 }
 
-header nav a {
+nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    padding: 8px 15px;
+    font-weight: bold;
+    padding: 5px 10px;
     border-radius: 5px;
-    transition: 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
-header nav a:hover {
-    background-color: #444;
+nav ul li a:hover {
+    background: #ff4081;
 }
 
-.container {
-    padding-top: 100px;
-    max-width: 1000px;
-    margin: auto;
-}
+/* ---------------- HERO ---------------- */
 
-h1 {
+.hero {
+    height: 400px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.cards {
+.hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero h2 {
+    font-size: 40px;
+}
+
+/* ---------------- ABOUT & MEMBERS ---------------- */
+
+.about, .members {
+    padding: 20px;
+    text-align: center;
+}
+
+.about h2, .members h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #ff4081;
+}
+
+.member-grid {
     display: flex;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
 }
 
-.card {
-    background-color: #111;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
+.member {
     text-align: center;
-    transition: 0.3s;
+    border: 2px solid #ff4081;
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s;
 }
 
-.card:hover {
+.member:hover {
     transform: scale(1.05);
 }
 
-.card a {
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #333;
-    border-radius: 5px;
-    transition: 0.3s;
+.member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
 
-.card a:hover {
-    background-color: #555;
+/* ---------------- NEWS ---------------- */
+
+.news {
+    padding: 20px;
+    text-align: center;
+    margin: 1rem 0;
 }
+
+.news article {
+    margin: 10px auto;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 20px;
+    border: 2px solid #ff4081;
+    max-width: 90%;
+}
+
+.more-news {
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.more-news:hover {
+    background-color: #e91e63;
+}
+
+/* ---------------- NEW MUSIC ---------------- */
+
+.new-music {
+    margin: 20px 0;
+}
+
+.new-music img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    width: 300px;
+    height: 300px;
+}
+
+/* ---------------- FOOTER ---------------- */
 
 footer {
-    margin-top: 40px;
-    background-color: #111;
+    background: #333;
+    color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 5px;
+    margin-top: auto;
 }
 
-@media (max-width: 768px) {
-    header nav {
-        flex-wrap: wrap;
-        gap: 10px;
+.social-icons img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+/* -----------------------------------------
+   RESPONSIVIDADE — ajustar no celular
+----------------------------------------- */
+
+@media (max-width: 600px) {
+
+    /* manter os botões lado a lado */
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: nowrap; /* impede de quebrar a linha */
     }
 
-    header nav a {
-        font-size: 16px;
-        padding: 6px 12px;
+    nav ul li a {
+        font-size: 14px;
+        padding: 5px 6px;
     }
 
-    .cards {
+    .hero {
+        height: auto;
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .member-grid {
         flex-direction: column;
         align-items: center;
     }
 
-    .card {
+    .member img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .about h2, .members h2 {
+        font-size: 26px;
+    }
+
+    .news {
+        padding: 10px;
+    }
+
+    .news article {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .new-music img {
         width: 90%;
+        height: auto;
     }
 }
