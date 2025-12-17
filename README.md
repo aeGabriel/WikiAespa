@@ -1,4 +1,4 @@
-aespa wiki
+Aespa Wiki
 
 Um site wiki dedicado ao grupo aespa, desenvolvido como projeto pessoal de front-end.
 O foco do projeto é organização de conteúdo, identidade visual e boa experiência de navegação.
