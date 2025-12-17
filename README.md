@@ -1,27 +1,28 @@
 Aespa Wiki
 
-Um site wiki dedicado ao grupo aespa, desenvolvido como projeto pessoal de front-end.
-O foco do projeto é organização de conteúdo, identidade visual e boa experiência de navegação.
+Este projeto começou durante a reta final do meu curso no SENAI. Enquanto aguardava a apresentação do TCC, decidi iniciar um projeto pessoal para praticar design e desenvolvimento front-end: uma wiki dedicada ao grupo aespa.
 
-Sobre o projeto
+A ideia surgiu como um passatempo, mas acabou se tornando um espaço prático para aplicar e evoluir conhecimentos em HTML, CSS, responsividade e noções de UI/UX. Todo o design do site foi desenvolvido do zero, com foco em organização visual e experiência do usuário.
 
-Este site reúne informações do aespa de forma clara e visual, explorando o conceito do grupo em um formato acessível para fãs.
-É também um projeto prático voltado ao desenvolvimento front-end e design ui/ux.
+Funcionalidades
+	•	Botões das integrantes com redirecionamento direto para seus perfis no Instagram
+	•	Páginas de músicas com botões que levam aos clipes oficiais no YouTube
+	•	Navegação personalizada entre as seções: início, galeria, discografia e membros
 
 Tecnologias utilizadas
 	•	HTML
 	•	CSS
 	•	JavaScript
 
+Status do projeto
+
+O site ainda não está 100% finalizado, mas já contribuiu significativamente para minha evolução em layout, organização visual e estruturação de páginas, além de servir como projeto de estudo e portfólio.
+
 Acesse o site
 
 🔗 GitHub Pages:
 
 https://aegabriel.github.io/WikiAespa/
-
-Objetivo
-
-Projeto criado para estudo, prática e portfólio, com foco em estrutura, responsividade e apresentação visual.
 
 Aviso
 
